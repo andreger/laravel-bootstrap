@@ -1,0 +1,13 @@
+{
+    "name": "andreger/laravel-bootstrap",
+    "description": "This library provides a collection of Bootstrap components.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Gervásio",
+            "email": "andreger@gmail.com"
+        }
+    ],
+    "require": {}
+}
