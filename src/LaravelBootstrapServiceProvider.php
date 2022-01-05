@@ -4,6 +4,14 @@ namespace LaravelBootstrap;
 
 use Illuminate\Support\ServiceProvider;
 use LaravelBootstrap\View\Component\Alert\Alert;
+use LaravelBootstrap\View\Component\Alert\AlertDanger;
+use LaravelBootstrap\View\Component\Alert\AlertDark;
+use LaravelBootstrap\View\Component\Alert\AlertInfo;
+use LaravelBootstrap\View\Component\Alert\AlertLight;
+use LaravelBootstrap\View\Component\Alert\AlertPrimary;
+use LaravelBootstrap\View\Component\Alert\AlertSecondary;
+use LaravelBootstrap\View\Component\Alert\AlertSuccess;
+use LaravelBootstrap\View\Component\Alert\AlertWarning;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
 {
@@ -23,6 +31,14 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
     {
         return [
             Alert::class,
+            AlertPrimary::class,
+            AlertSecondary::class,
+            AlertSuccess::class,
+            AlertDanger::class,
+            AlertWarning::class,
+            AlertInfo::class,
+            AlertLight::class,
+            AlertDark::class,
         ];
     }
 }
