@@ -1,4 +1,4 @@
-<div class="alert {{ $themeColor ? "alert-$themeColor" : null }} {{ $dismissible ? 'alert-dismissible fade show' : null }}" role="alert">
+<div class="alert {{ $themeColor ? "alert-$themeColor" : null }} {{ $dismissible ? 'alert-dismissible fade show' : null }} {$class}" role="alert">
     @if($header)
         <h4 class="alert-heading">{!! $header !!}</h4>
     @endif

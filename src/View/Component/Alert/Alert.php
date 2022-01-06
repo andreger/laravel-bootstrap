@@ -17,12 +17,15 @@ class Alert extends Component
 
     public $dismissible;
 
+    public $class;
+
     public function __construct(
         $themeColor = 'primary',
         $text = null,
         $header = null,
         $footer = null,
-        $dismissible = true
+        $dismissible = true,
+        $class = null
     )
     {
         if(! $this->themeColor) {
@@ -33,6 +36,7 @@ class Alert extends Component
         $this->header = $header;
         $this->footer = $footer;
         $this->dismissible = $dismissible;
+        $this->class = $class;
     }
     /**
      * @inheritDoc
@@ -45,6 +49,7 @@ class Alert extends Component
             'footer' => $this->footer,
             'text' => $this->text,
             'themeColor' => $this->themeColor,
+            'class' => $this->class,
         ]);
     }
 }
