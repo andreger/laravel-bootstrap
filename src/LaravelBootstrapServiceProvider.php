@@ -12,6 +12,8 @@ use LaravelBootstrap\View\Component\Alert\AlertPrimary;
 use LaravelBootstrap\View\Component\Alert\AlertSecondary;
 use LaravelBootstrap\View\Component\Alert\AlertSuccess;
 use LaravelBootstrap\View\Component\Alert\AlertWarning;
+use LaravelBootstrap\View\Component\Form\InputPassword;
+use LaravelBootstrap\View\Component\Form\InputText;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
 {
@@ -31,14 +33,17 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
     {
         return [
             Alert::class,
+            AlertDanger::class,
+            AlertDark::class,
+            AlertInfo::class,
+            AlertLight::class,
+            InputPassword::class,
             AlertPrimary::class,
             AlertSecondary::class,
             AlertSuccess::class,
-            AlertDanger::class,
             AlertWarning::class,
-            AlertInfo::class,
-            AlertLight::class,
-            AlertDark::class,
+            InputPassword::class,
+            InputText::class,
         ];
     }
 }

@@ -25,8 +25,11 @@ class Alert extends Component
         $dismissible = true
     )
     {
+        if(! $this->themeColor) {
+            $this->themeColor = $themeColor;
+        }
+
         $this->text = $text;
-        $this->themeColor = $themeColor;
         $this->header = $header;
         $this->footer = $footer;
         $this->dismissible = $dismissible;
