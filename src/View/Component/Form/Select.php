@@ -4,56 +4,60 @@ namespace LaravelBootstrap\View\Component\Form;
 
 use Illuminate\View\Component;
 
-abstract class Input extends Component
+class Select extends Component
 {
-    public $type;
 
     public $name;
 
-    public $value;
+    public $options;
+
+    public $selected;
 
     public $placeholder;
 
     public $disabled;
 
-    public $readonly;
+    public $size;
+
+    public $multiple;
 
     public $class;
 
     public function __construct(
-        $type = 'text',
         $name = null,
-        $value = null,
+        $options = [],
+        $selected = null,
         $placeholder = null,
         $disabled = false,
-        $readonly = false,
+        $size = null,
+        $multiple = null,
         $class = null
     )
     {
-        if(! $this->type) {
-            $this->type = $type;
-        }
-
         $this->name = $name;
-        $this->value = $value;
+        $this->options = $options;
+        $this->selected = $selected;
         $this->placeholder = $placeholder;
         $this->disabled = $disabled;
-        $this->readonly = $readonly;
+        $this->size = $size;
+        $this->multiple = $multiple;
         $this->class = $class;
     }
+
 
     /**
      * @inheritDoc
      */
     public function render()
     {
-        return view("bs::form.input", [
-            'type' => $this->type,
+        return view("bs::form.select", [
             'name' => $this->name,
-            'value' => $this->value,
+            'options' => $this->options,
+            'selected' => $this->selected,
             'placeholder' => $this->placeholder,
             'disabled' => $this->disabled,
-            'readonly' => $this->readonly,
+            'size' => $this->size,
+            'multiple' => $this->multiple,
             'class' => $this->class,
         ]);
     }

@@ -14,6 +14,7 @@ use LaravelBootstrap\View\Component\Alert\AlertSuccess;
 use LaravelBootstrap\View\Component\Alert\AlertWarning;
 use LaravelBootstrap\View\Component\Form\InputPassword;
 use LaravelBootstrap\View\Component\Form\InputText;
+use LaravelBootstrap\View\Component\Form\Select;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
 {
@@ -44,6 +45,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             AlertWarning::class,
             InputPassword::class,
             InputText::class,
+            Select::class,
         ];
     }
 }

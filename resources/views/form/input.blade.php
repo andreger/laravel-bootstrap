@@ -1,5 +1,5 @@
 @php
-    $args = ['class' => 'form-control'];
+    $args = ['class' => "form-control {$class}"];
 
     $attributes = [
         'disabled' => $disabled,
