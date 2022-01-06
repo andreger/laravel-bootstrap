@@ -9,5 +9,20 @@
             "email": "andreger@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravelcollective/html": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelBootstrap\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelBootstrap\\LaravelBootstrapServiceProvider"
+            ]
+        }
+    }
 }
