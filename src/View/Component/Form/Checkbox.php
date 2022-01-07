@@ -1,69 +1,63 @@
 <?php
 
+
 namespace LaravelBootstrap\View\Component\Form;
 
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
-class Select extends Component
+class Checkbox extends Component
 {
     public $id;
 
+    public $type = 'checkbox';
+
     public $name;
 
-    public $options;
+    public $value;
 
     public $selected;
 
-    public $placeholder;
-
     public $disabled;
 
-    public $size;
-
-    public $multiple;
-
     public $class;
+
+    public $label;
 
     public function __construct(
         $id = null,
         $name = null,
-        $options = [],
+        $value = null,
         $selected = null,
-        $placeholder = null,
         $disabled = false,
-        $size = null,
-        $multiple = null,
-        $class = null
+        $class = null,
+        $label = null
     )
     {
         $this->id = $id;
         $this->name = $name;
-        $this->options = $options;
+        $this->value = $value;
         $this->selected = $selected;
-        $this->placeholder = $placeholder;
         $this->disabled = $disabled;
-        $this->size = $size;
-        $this->multiple = $multiple;
         $this->class = $class;
+        $this->label = $label;
     }
-
 
     /**
      * @inheritDoc
      */
     public function render()
     {
-        return view("bs::form.select", [
+        return view("bs::form.checkbox", [
+            'type' => $this->type,
             'name' => $this->name,
-            'options' => $this->options,
+            'value' => $this->value,
             'selected' => $this->selected,
+            'label' => $this->label,
             'args' => [
-                'id' => $this->id,
-                'placeholder' => $this->placeholder,
                 'disabled' => $this->disabled,
-                'size' => $this->size,
-                'multiple' => $this->multiple,
-                'class' => "form-select $this->class",
+                'class' => "form-check-input $this->class",
+                'id' => $this->id ?? $this->name . '-' . Str::random(10) ?? null,
             ]
         ]);
     }

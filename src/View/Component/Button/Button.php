@@ -1,35 +1,35 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Form;
+
+namespace LaravelBootstrap\View\Component\Button;
+
 
 use Illuminate\View\Component;
 
-abstract class Input extends Component
+class Button extends Component
 {
+
     public $id;
 
-    public $type;
+    public $themeColor;
+
+    public $type = 'button';
 
     public $name;
 
     public $value;
 
-    public $placeholder;
-
     public $disabled;
-
-    public $readonly;
 
     public $class;
 
     public function __construct(
         $id = null,
-        $type = 'text',
+        $themeColor = 'primary',
+        $type = 'button',
         $name = null,
         $value = null,
-        $placeholder = null,
         $disabled = false,
-        $readonly = false,
         $class = null
     )
     {
@@ -37,12 +37,14 @@ abstract class Input extends Component
             $this->type = $type;
         }
 
+        if(! $this->themeColor) {
+            $this->themeColor = $themeColor;
+        }
+
         $this->id = $id;
         $this->name = $name;
         $this->value = $value;
-        $this->placeholder = $placeholder;
         $this->disabled = $disabled;
-        $this->readonly = $readonly;
         $this->class = $class;
     }
 
@@ -51,17 +53,13 @@ abstract class Input extends Component
      */
     public function render()
     {
-        return view("bs::form.input", [
+        return view("bs::button.button", [
             'id' => $this->id,
             'type' => $this->type,
             'name' => $this->name,
             'value' => $this->value,
-            'args' => [
-                'placeholder' => $this->placeholder,
-                'disabled' => $this->disabled,
-                'readonly' => $this->readonly,
-                'class' => "form-control $this->class",
-            ]
+            'disabled' => $this->disabled ? 'disabled' : null,
+            'classTag' => "btn btn-{$this->themeColor} {$this->class}",
         ]);
     }
 }

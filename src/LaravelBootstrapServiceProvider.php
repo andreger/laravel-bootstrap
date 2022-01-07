@@ -12,8 +12,27 @@ use LaravelBootstrap\View\Component\Alert\AlertPrimary;
 use LaravelBootstrap\View\Component\Alert\AlertSecondary;
 use LaravelBootstrap\View\Component\Alert\AlertSuccess;
 use LaravelBootstrap\View\Component\Alert\AlertWarning;
+use LaravelBootstrap\View\Component\Button\Button;
+use LaravelBootstrap\View\Component\Button\ButtonDanger;
+use LaravelBootstrap\View\Component\Button\ButtonDark;
+use LaravelBootstrap\View\Component\Button\ButtonInfo;
+use LaravelBootstrap\View\Component\Button\ButtonLight;
+use LaravelBootstrap\View\Component\Button\ButtonOutlineDanger;
+use LaravelBootstrap\View\Component\Button\ButtonOutlineDark;
+use LaravelBootstrap\View\Component\Button\ButtonOutlineInfo;
+use LaravelBootstrap\View\Component\Button\ButtonOutlineLight;
+use LaravelBootstrap\View\Component\Button\ButtonOutlinePrimary;
+use LaravelBootstrap\View\Component\Button\ButtonOutlineSecondary;
+use LaravelBootstrap\View\Component\Button\ButtonOutlineSuccess;
+use LaravelBootstrap\View\Component\Button\ButtonOutlineWarning;
+use LaravelBootstrap\View\Component\Button\ButtonPrimary;
+use LaravelBootstrap\View\Component\Button\ButtonSecondary;
+use LaravelBootstrap\View\Component\Button\ButtonSuccess;
+use LaravelBootstrap\View\Component\Button\ButtonWarning;
+use LaravelBootstrap\View\Component\Form\Checkbox;
 use LaravelBootstrap\View\Component\Form\InputPassword;
 use LaravelBootstrap\View\Component\Form\InputText;
+use LaravelBootstrap\View\Component\Form\Radio;
 use LaravelBootstrap\View\Component\Form\Select;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
@@ -38,14 +57,36 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             AlertDark::class,
             AlertInfo::class,
             AlertLight::class,
-            InputPassword::class,
             AlertPrimary::class,
             AlertSecondary::class,
             AlertSuccess::class,
             AlertWarning::class,
+
             InputPassword::class,
             InputText::class,
+
             Select::class,
+
+            Checkbox::class,
+            Radio::class,
+
+            Button::class,
+            ButtonDanger::class,
+            ButtonDark::class,
+            ButtonInfo::class,
+            ButtonLight::class,
+            ButtonPrimary::class,
+            ButtonSecondary::class,
+            ButtonSuccess::class,
+            ButtonWarning::class,
+            ButtonOutlineDanger::class,
+            ButtonOutlineDark::class,
+            ButtonOutlineInfo::class,
+            ButtonOutlineLight::class,
+            ButtonOutlinePrimary::class,
+            ButtonOutlineSecondary::class,
+            ButtonOutlineSuccess::class,
+            ButtonOutlineWarning::class,
         ];
     }
 }
