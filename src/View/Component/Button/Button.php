@@ -54,11 +54,8 @@ class Button extends Component
     public function render()
     {
         return view("bs::button.button", [
-            'id' => $this->id,
-            'type' => $this->type,
-            'name' => $this->name,
-            'value' => $this->value,
-            'disabled' => $this->disabled ? 'disabled' : null,
+            'nameTag' => $this->name ? "name={$this->name}" : null,
+            'disabledTag' => $this->disabled ? 'disabled' : null,
             'classTag' => "btn btn-{$this->themeColor} {$this->class}",
         ]);
     }

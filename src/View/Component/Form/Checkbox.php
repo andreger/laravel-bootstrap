@@ -49,11 +49,6 @@ class Checkbox extends Component
     public function render()
     {
         return view("bs::form.checkbox", [
-            'type' => $this->type,
-            'name' => $this->name,
-            'value' => $this->value,
-            'selected' => $this->selected,
-            'label' => $this->label,
             'args' => [
                 'disabled' => $this->disabled,
                 'class' => "form-check-input $this->class",

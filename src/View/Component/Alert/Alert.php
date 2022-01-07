@@ -38,18 +38,13 @@ class Alert extends Component
         $this->dismissible = $dismissible;
         $this->class = $class;
     }
+
     /**
      * @inheritDoc
      */
+
     public function render()
     {
-        return view("bs::alert.alert", [
-            'dismissible' => $this->dismissible,
-            'header' => $this->header,
-            'footer' => $this->footer,
-            'text' => $this->text,
-            'themeColor' => $this->themeColor,
-            'class' => $this->class,
-        ]);
+        return view("bs::alert.alert");
     }
 }

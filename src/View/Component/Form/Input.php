@@ -52,10 +52,6 @@ abstract class Input extends Component
     public function render()
     {
         return view("bs::form.input", [
-            'id' => $this->id,
-            'type' => $this->type,
-            'name' => $this->name,
-            'value' => $this->value,
             'args' => [
                 'placeholder' => $this->placeholder,
                 'disabled' => $this->disabled,

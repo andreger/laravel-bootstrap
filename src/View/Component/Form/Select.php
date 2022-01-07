@@ -54,9 +54,6 @@ class Select extends Component
     public function render()
     {
         return view("bs::form.select", [
-            'name' => $this->name,
-            'options' => $this->options,
-            'selected' => $this->selected,
             'args' => [
                 'id' => $this->id,
                 'placeholder' => $this->placeholder,
