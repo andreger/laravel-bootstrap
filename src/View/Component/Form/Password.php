@@ -1,10 +1,8 @@
 <?php
 
-
 namespace LaravelBootstrap\View\Component\Form;
 
-
-class InputText extends Input
+class Password extends Input
 {
-    public $type = 'text';
+    public $type = 'password';
 }

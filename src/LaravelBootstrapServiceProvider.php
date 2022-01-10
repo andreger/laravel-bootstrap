@@ -3,6 +3,22 @@
 namespace LaravelBootstrap;
 
 use Illuminate\Support\ServiceProvider;
+use LaravelBootstrap\View\Component\A\ADanger;
+use LaravelBootstrap\View\Component\A\ADark;
+use LaravelBootstrap\View\Component\A\AInfo;
+use LaravelBootstrap\View\Component\A\ALight;
+use LaravelBootstrap\View\Component\A\AOutlineDanger;
+use LaravelBootstrap\View\Component\A\AOutlineDark;
+use LaravelBootstrap\View\Component\A\AOutlineInfo;
+use LaravelBootstrap\View\Component\A\AOutlineLight;
+use LaravelBootstrap\View\Component\A\AOutlinePrimary;
+use LaravelBootstrap\View\Component\A\AOutlineSecondary;
+use LaravelBootstrap\View\Component\A\AOutlineSuccess;
+use LaravelBootstrap\View\Component\A\AOutlineWarning;
+use LaravelBootstrap\View\Component\A\APrimary;
+use LaravelBootstrap\View\Component\A\ASecondary;
+use LaravelBootstrap\View\Component\A\ASuccess;
+use LaravelBootstrap\View\Component\A\AWarning;
 use LaravelBootstrap\View\Component\Alert\Alert;
 use LaravelBootstrap\View\Component\Alert\AlertDanger;
 use LaravelBootstrap\View\Component\Alert\AlertDark;
@@ -30,10 +46,11 @@ use LaravelBootstrap\View\Component\Button\ButtonSecondary;
 use LaravelBootstrap\View\Component\Button\ButtonSuccess;
 use LaravelBootstrap\View\Component\Button\ButtonWarning;
 use LaravelBootstrap\View\Component\Form\Checkbox;
-use LaravelBootstrap\View\Component\Form\InputPassword;
-use LaravelBootstrap\View\Component\Form\InputText;
+use LaravelBootstrap\View\Component\Form\Password;
+use LaravelBootstrap\View\Component\Form\Text;
 use LaravelBootstrap\View\Component\Form\Radio;
 use LaravelBootstrap\View\Component\Form\Select;
+use LaravelBootstrap\View\Component\A\A;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
 {
@@ -62,8 +79,8 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             AlertSuccess::class,
             AlertWarning::class,
 
-            InputPassword::class,
-            InputText::class,
+            Password::class,
+            Text::class,
 
             Select::class,
 
@@ -87,6 +104,24 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             ButtonOutlineSecondary::class,
             ButtonOutlineSuccess::class,
             ButtonOutlineWarning::class,
+
+            A::class,
+            ADanger::class,
+            ADark::class,
+            AInfo::class,
+            ALight::class,
+            APrimary::class,
+            ASecondary::class,
+            ASuccess::class,
+            AWarning::class,
+            AOutlineDanger::class,
+            AOutlineDark::class,
+            AOutlineInfo::class,
+            AOutlineLight::class,
+            AOutlinePrimary::class,
+            AOutlineSecondary::class,
+            AOutlineSuccess::class,
+            AOutlineWarning::class,
         ];
     }
 }

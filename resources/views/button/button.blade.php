@@ -1,1 +1,3 @@
-<button type="{{ $type }}" class="{{ $classTag }}" {{ $nameTag }} {{ $disabledTag }}>{{ $value }}</button>
+<button type="{{ $type }}" class="{{ $classTag }}" {{ $nameTag }} {{ $disabledTag }}>
+    {{ $text }}
+</button>

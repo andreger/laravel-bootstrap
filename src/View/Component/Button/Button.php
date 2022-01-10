@@ -13,11 +13,11 @@ class Button extends Component
 
     public $themeColor;
 
-    public $type = 'button';
+    public $type;
 
     public $name;
 
-    public $value;
+    public $text;
 
     public $disabled;
 
@@ -28,22 +28,19 @@ class Button extends Component
         $themeColor = 'primary',
         $type = 'button',
         $name = null,
-        $value = null,
+        $text = null,
         $disabled = false,
         $class = null
     )
     {
-        if(! $this->type) {
-            $this->type = $type;
-        }
-
         if(! $this->themeColor) {
             $this->themeColor = $themeColor;
         }
 
+        $this->type = $type;
         $this->id = $id;
         $this->name = $name;
-        $this->value = $value;
+        $this->text = $text;
         $this->disabled = $disabled;
         $this->class = $class;
     }
