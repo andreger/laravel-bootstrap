@@ -51,6 +51,10 @@ use LaravelBootstrap\View\Component\Form\Text;
 use LaravelBootstrap\View\Component\Form\Radio;
 use LaravelBootstrap\View\Component\Form\Select;
 use LaravelBootstrap\View\Component\A\A;
+use LaravelBootstrap\View\Component\Nav\Nav;
+use LaravelBootstrap\View\Component\Nav\NavPill;
+use LaravelBootstrap\View\Component\Nav\Tab;
+use LaravelBootstrap\View\Component\Nav\VerticalNav;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
 {
@@ -68,6 +72,17 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
 
     protected function viewComponents(): array
     {
+        return array_merge(
+            $this->alertViewComponents(),
+            $this->aViewComponents(),
+            $this->buttonViewComponents(),
+            $this->formViewComponents(),
+            $this->navViewComponents()
+        );
+    }
+
+    public function alertViewComponents()
+    {
         return [
             Alert::class,
             AlertDanger::class,
@@ -78,33 +93,12 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             AlertSecondary::class,
             AlertSuccess::class,
             AlertWarning::class,
+        ];
+    }
 
-            Password::class,
-            Text::class,
-
-            Select::class,
-
-            Checkbox::class,
-            Radio::class,
-
-            Button::class,
-            ButtonDanger::class,
-            ButtonDark::class,
-            ButtonInfo::class,
-            ButtonLight::class,
-            ButtonPrimary::class,
-            ButtonSecondary::class,
-            ButtonSuccess::class,
-            ButtonWarning::class,
-            ButtonOutlineDanger::class,
-            ButtonOutlineDark::class,
-            ButtonOutlineInfo::class,
-            ButtonOutlineLight::class,
-            ButtonOutlinePrimary::class,
-            ButtonOutlineSecondary::class,
-            ButtonOutlineSuccess::class,
-            ButtonOutlineWarning::class,
-
+    public function aViewComponents()
+    {
+        return [
             A::class,
             ADanger::class,
             ADark::class,
@@ -122,6 +116,50 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             AOutlineSecondary::class,
             AOutlineSuccess::class,
             AOutlineWarning::class,
+        ];
+    }
+
+    public function buttonViewComponents()
+    {
+        return [
+            Button::class,
+            ButtonDanger::class,
+            ButtonDark::class,
+            ButtonInfo::class,
+            ButtonLight::class,
+            ButtonPrimary::class,
+            ButtonSecondary::class,
+            ButtonSuccess::class,
+            ButtonWarning::class,
+            ButtonOutlineDanger::class,
+            ButtonOutlineDark::class,
+            ButtonOutlineInfo::class,
+            ButtonOutlineLight::class,
+            ButtonOutlinePrimary::class,
+            ButtonOutlineSecondary::class,
+            ButtonOutlineSuccess::class,
+            ButtonOutlineWarning::class,
+        ];
+    }
+
+    public function formViewComponents()
+    {
+        return [
+            Checkbox::class,
+            Password::class,
+            Radio::class,
+            Select::class,
+            Text::class,
+        ];
+    }
+
+    public function navViewComponents()
+    {
+        return [
+            Nav::class,
+            NavPill::class,
+            Tab::class,
+            VerticalNav::class,
         ];
     }
 }
