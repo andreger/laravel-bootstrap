@@ -1,9 +1,9 @@
 @php
     switch ($type) {
-
-        case "password": echo Form::password($name, $args); break;
-
-        case "text": echo Form::text($name, $value, $args); break;
+        case "password": $input = Form::password($name, $args); break;
+        case "text": $input = Form::text($name, $value, $args); break;
     }
-
 @endphp
+
+@include('bs::common.label')
+{{ $input }}

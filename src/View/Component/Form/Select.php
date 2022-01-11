@@ -24,6 +24,8 @@ class Select extends Component
 
     public $class;
 
+    public $label;
+
     public function __construct(
         $id = null,
         $name = null,
@@ -33,7 +35,8 @@ class Select extends Component
         $disabled = false,
         $size = null,
         $multiple = null,
-        $class = null
+        $class = null,
+        $label = null
     )
     {
         $this->id = $id;
@@ -45,6 +48,7 @@ class Select extends Component
         $this->size = $size;
         $this->multiple = $multiple;
         $this->class = $class;
+        $this->label = $label;
     }
 
 
