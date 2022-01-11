@@ -19,13 +19,16 @@ class A extends \Illuminate\View\Component
 
     public $class;
 
+    public $icon;
+
     public function __construct(
         $id = null,
         $themeColor = null,
         $href = null,
         $text = null,
         $target = null,
-        $class = null
+        $class = null,
+        $icon = null
     )
     {
         if(! $this->themeColor) {
@@ -37,6 +40,7 @@ class A extends \Illuminate\View\Component
         $this->text = $text;
         $this->target = $target;
         $this->class = $class;
+        $this->icon = $icon;
     }
 
     /**
