@@ -23,7 +23,11 @@ class Button extends Component
 
     public $class;
 
-    public $icon;
+    public $fas;
+
+    public $far;
+
+    public $fab;
 
     public function __construct(
         $id = null,
@@ -33,7 +37,9 @@ class Button extends Component
         $text = null,
         $disabled = false,
         $class = null,
-        $icon = null
+        $fas = null,
+        $fab = null,
+        $far = null
     )
     {
         if(! $this->themeColor) {
@@ -46,7 +52,9 @@ class Button extends Component
         $this->text = $text;
         $this->disabled = $disabled;
         $this->class = $class;
-        $this->icon = $icon;
+        $this->fas = $fas;
+        $this->far = $far;
+        $this->fab = $fab;
     }
 
     /**
