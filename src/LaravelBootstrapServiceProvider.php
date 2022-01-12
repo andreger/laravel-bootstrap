@@ -45,6 +45,15 @@ use LaravelBootstrap\View\Component\Button\ButtonPrimary;
 use LaravelBootstrap\View\Component\Button\ButtonSecondary;
 use LaravelBootstrap\View\Component\Button\ButtonSuccess;
 use LaravelBootstrap\View\Component\Button\ButtonWarning;
+use LaravelBootstrap\View\Component\Card\Card;
+use LaravelBootstrap\View\Component\Card\CardDanger;
+use LaravelBootstrap\View\Component\Card\CardDark;
+use LaravelBootstrap\View\Component\Card\CardInfo;
+use LaravelBootstrap\View\Component\Card\CardLight;
+use LaravelBootstrap\View\Component\Card\CardPrimary;
+use LaravelBootstrap\View\Component\Card\CardSecondary;
+use LaravelBootstrap\View\Component\Card\CardSuccess;
+use LaravelBootstrap\View\Component\Card\CardWarning;
 use LaravelBootstrap\View\Component\Form\Checkbox;
 use LaravelBootstrap\View\Component\Form\Password;
 use LaravelBootstrap\View\Component\Form\Text;
@@ -76,6 +85,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             $this->alertViewComponents(),
             $this->aViewComponents(),
             $this->buttonViewComponents(),
+            $this->cardViewComponents(),
             $this->formViewComponents(),
             $this->navViewComponents()
         );
@@ -142,6 +152,21 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
+    public function cardViewComponents()
+    {
+        return [
+            Card::class,
+            CardDanger::class,
+            CardDark::class,
+            CardInfo::class,
+            CardLight::class,
+            CardPrimary::class,
+            CardSecondary::class,
+            CardSuccess::class,
+            CardWarning::class,
+        ];
+    }
+
     public function formViewComponents()
     {
         return [
@@ -162,4 +187,5 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             VerticalNav::class,
         ];
     }
+
 }
