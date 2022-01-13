@@ -1,6 +1,6 @@
-<div class="card {{ $themeColorClass }} {{ $cardClass }}">
+<div class="card {{ $cardClass }} {{ $themeColorCardClass }}">
     @if ($header)
-        <div class="card-header {{ $headerClass }}">
+        <div class="card-header {{ $headerClass }} {{ $themeColorHeaderClass }}">
             {{ $header }}
         </div>
     @endif

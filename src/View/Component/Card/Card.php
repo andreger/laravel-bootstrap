@@ -3,10 +3,13 @@
 namespace LaravelBootstrap\View\Component\Card;
 
 use Illuminate\View\Component;
+use LaravelBootstrap\Helpers\ThemeColor;
 
 class Card extends Component
 {
-    public $themeColorClass;
+    public $themeColor;
+
+    public $themeColorLayout;
 
     public $header;
 
@@ -21,7 +24,8 @@ class Card extends Component
     public $footerClass;
 
     public function __construct(
-        $themeColorClass = null,
+        $themeColor = 'primary',
+        $themeColorLayout = 'full',
         $header = null,
         $footer = null,
         $cardClass = null,
@@ -30,10 +34,11 @@ class Card extends Component
         $footerClass = null
     )
     {
-        if(! $this->themeColorClass) {
-            $this->themeColorClass = $themeColorClass;
+        if(! $this->themeColor) {
+            $this->themeColor = $themeColor;
         }
 
+        $this->themeColorLayout = $themeColorLayout;
         $this->header = $header;
         $this->footer = $footer;
         $this->cardClass = $cardClass;
@@ -47,6 +52,45 @@ class Card extends Component
      */
     public function render()
     {
-        return view("bs::card.card");
+//        dd($this->themeColorLayout);
+//        dd($this->getThemeColorClasses());
+
+        return view("bs::card.card", $this->getThemeColorClasses());
+    }
+
+    private function getThemeColorClasses()
+    {
+        $textColorClass = ThemeColor::getTextColor($this->themeColor);
+
+        switch ($this->themeColorLayout) {
+
+            case 'border': {
+                $themeColorCardClass = "border-{$this->themeColor}";
+                $themeColorHeaderClass = null;
+                break;
+            }
+
+            case 'header': {
+                $themeColorCardClass = null;
+                $themeColorHeaderClass = "bg-{$this->themeColor} {$textColorClass}";
+                break;
+            }
+
+            case 'full': {
+                $themeColorCardClass = "bg-{$this->themeColor} {$textColorClass}";
+                $themeColorHeaderClass = null;
+                break;
+            }
+
+            default : {
+                $themeColorCardClass = null;
+                $themeColorHeaderClass = null;
+            }
+        }
+
+        return [
+            'themeColorCardClass' => $themeColorCardClass,
+            'themeColorHeaderClass' => $themeColorHeaderClass
+        ];
     }
 }
