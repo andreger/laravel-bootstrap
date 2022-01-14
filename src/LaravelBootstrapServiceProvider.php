@@ -37,6 +37,7 @@ use LaravelBootstrap\View\Component\Badge\BadgePrimary;
 use LaravelBootstrap\View\Component\Badge\BadgeSecondary;
 use LaravelBootstrap\View\Component\Badge\BadgeSuccess;
 use LaravelBootstrap\View\Component\Badge\BadgeWarning;
+use LaravelBootstrap\View\Component\Breadcrumb\Breadcrumb;
 use LaravelBootstrap\View\Component\Button\Button;
 use LaravelBootstrap\View\Component\Button\ButtonDanger;
 use LaravelBootstrap\View\Component\Button\ButtonDark;
@@ -94,6 +95,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             $this->alertViewComponents(),
             $this->aViewComponents(),
             $this->badgeViewComponents(),
+            $this->breadcrumbViewComponents(),
             $this->buttonViewComponents(),
             $this->cardViewComponents(),
             $this->formViewComponents(),
@@ -151,6 +153,13 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             BadgeSecondary::class,
             BadgeSuccess::class,
             BadgeWarning::class,
+        ];
+    }
+
+    public function breadcrumbViewComponents()
+    {
+        return [
+            Breadcrumb::class,
         ];
     }
 
