@@ -28,6 +28,15 @@ use LaravelBootstrap\View\Component\Alert\AlertPrimary;
 use LaravelBootstrap\View\Component\Alert\AlertSecondary;
 use LaravelBootstrap\View\Component\Alert\AlertSuccess;
 use LaravelBootstrap\View\Component\Alert\AlertWarning;
+use LaravelBootstrap\View\Component\Badge\Badge;
+use LaravelBootstrap\View\Component\Badge\BadgeDanger;
+use LaravelBootstrap\View\Component\Badge\BadgeDark;
+use LaravelBootstrap\View\Component\Badge\BadgeInfo;
+use LaravelBootstrap\View\Component\Badge\BadgeLight;
+use LaravelBootstrap\View\Component\Badge\BadgePrimary;
+use LaravelBootstrap\View\Component\Badge\BadgeSecondary;
+use LaravelBootstrap\View\Component\Badge\BadgeSuccess;
+use LaravelBootstrap\View\Component\Badge\BadgeWarning;
 use LaravelBootstrap\View\Component\Button\Button;
 use LaravelBootstrap\View\Component\Button\ButtonDanger;
 use LaravelBootstrap\View\Component\Button\ButtonDark;
@@ -84,6 +93,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         return array_merge(
             $this->alertViewComponents(),
             $this->aViewComponents(),
+            $this->badgeViewComponents(),
             $this->buttonViewComponents(),
             $this->cardViewComponents(),
             $this->formViewComponents(),
@@ -126,6 +136,21 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             AOutlineSecondary::class,
             AOutlineSuccess::class,
             AOutlineWarning::class,
+        ];
+    }
+
+    public function badgeViewComponents()
+    {
+        return [
+            Badge::class,
+            BadgeDanger::class,
+            BadgeDark::class,
+            BadgeInfo::class,
+            BadgeLight::class,
+            BadgePrimary::class,
+            BadgeSecondary::class,
+            BadgeSuccess::class,
+            BadgeWarning::class,
         ];
     }
 

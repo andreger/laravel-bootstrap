@@ -52,9 +52,6 @@ class Card extends Component
      */
     public function render()
     {
-//        dd($this->themeColorLayout);
-//        dd($this->getThemeColorClasses());
-
         return view("bs::card.card", $this->getThemeColorClasses());
     }
 
