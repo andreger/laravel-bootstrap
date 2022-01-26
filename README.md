@@ -1,6 +1,7 @@
 # Laravel Bootstrap
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/asgedev/laravel-bootstrap.svg?style=flat-square)](https://packagist.org/packages/asgedev/laravel-bootstrap)
+![](https://github.com/asgedev/laravel-bootstrap/workflows/Run%20Tests/badge.svg?branch=master)
 
 ## Documentation, Installation, and Usage Instructions
 
