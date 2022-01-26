@@ -15,4 +15,15 @@ class ATest extends TestCase
 
         $view->assertSeeInOrder(['<a', '</a>'], false);
     }
+
+    /** @test */
+    public function render_fas()
+    {
+        $view = $this->blade(
+            '<x-bs-a fas="times" />',
+        );
+
+        $view->assertSee('fas fa-times');
+    }
+
 }
