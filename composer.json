@@ -18,11 +18,20 @@
             "LaravelBootstrap\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelBootstrap\\Tests\\": "tests"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "LaravelBootstrap\\LaravelBootstrapServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
     }
 }
