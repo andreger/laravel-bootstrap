@@ -1,5 +1,6 @@
 <?php
 
+namespace LaravelBootstrap\Tests\Unit;
 
 use LaravelBootstrap\Tests\TestCase;
 
