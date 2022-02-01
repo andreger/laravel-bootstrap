@@ -1,7 +1,7 @@
 # Laravel Bootstrap
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/asgedev/laravel-bootstrap.svg?style=flat-square)](https://packagist.org/packages/asgedev/laravel-bootstrap)
-[![PHP Composer](https://github.com/asgedev/laravel-bootstrap/actions/workflows/php.yml/badge.svg)](https://github.com/asgedev/laravel-bootstrap/actions/workflows/php.yml)
+[![Run Tests](https://github.com/asgedev/laravel-bootstrap/actions/workflows/php.yml/badge.svg)](https://github.com/asgedev/laravel-bootstrap/actions/workflows/php.yml)
 
 ## Documentation, Installation, and Usage Instructions
 
