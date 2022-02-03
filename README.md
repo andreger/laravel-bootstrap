@@ -122,3 +122,83 @@ It will be rendered as:
 | fas | string | null | Font Awesome solid icon (e.g., check) |
 | far | string | null | Font Awesome regular icon (e.g., clock) |
 | fab | string | null | Font Awesome brand icon (e.g., git) |
+
+---
+
+## Table
+
+### Syntax
+
+```php
+$data  = [
+    [
+        'First',
+        'Last',
+        'Handle',
+    ],
+    [
+        'Jonh',
+        'Otto',
+        '@mdo'
+    ],   
+    [
+        'Jacob',
+        'Thornton',
+        '@fat'
+    ],   
+    [
+        'Larry',
+        'the Bird',
+        '@twitter'
+    ],   
+];
+```
+
+```html
+<x-bs-table :data="$data" :hasHead="true" />
+```
+
+It will be rendered as:
+
+```html
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+### Attributes
+
+| Attribute | Type | Default | Descriptions |
+|---|---|---|---|
+| data | array | null | Table data items |
+| hasHead | bool | false | Uses the first data item as thead row  |
+| hasFoot | bool | false | Uses the last data item as tfoot row  |
+| striped | bool | false | Adds zebra-striping to any table row within the tbody  |
+| hover | bool | false | Enables a hover state on table rows within a tbody |
+| bordered | bool | false | Adds borders on all sides of the table and cells |
+| borderless | bool | false | Removes borders on all sides of the table and cells |
+| small | bool | false | Makes table more compact by cutting all cell padding in half |
+| caption | string | null | Adds a caption to the table |

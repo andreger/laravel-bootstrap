@@ -74,6 +74,7 @@ use LaravelBootstrap\View\Component\Nav\Nav;
 use LaravelBootstrap\View\Component\Nav\NavPill;
 use LaravelBootstrap\View\Component\Nav\Tab;
 use LaravelBootstrap\View\Component\Nav\VerticalNav;
+use LaravelBootstrap\View\Component\Table\Table;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
 {
@@ -98,7 +99,8 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             $this->buttonViewComponents(),
             $this->cardViewComponents(),
             $this->formViewComponents(),
-            $this->navViewComponents()
+            $this->navViewComponents(),
+            $this->tableViewComponents()
         );
     }
 
@@ -218,6 +220,13 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             NavPill::class,
             Tab::class,
             VerticalNav::class,
+        ];
+    }
+
+    public function tableViewComponents()
+    {
+        return [
+            Table::class,
         ];
     }
 
