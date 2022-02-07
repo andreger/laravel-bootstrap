@@ -79,6 +79,10 @@ class Table extends Component
     {
         $values = ["table"];
 
+        if ($this->themeColor) {
+            $values[] = "table-{$this->themeColor}";
+        }
+
         if ($this->striped) {
             $values[] = "table-striped";
         }

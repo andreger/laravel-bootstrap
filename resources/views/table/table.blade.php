@@ -3,7 +3,7 @@
         <caption>{{ $caption }}</caption>
     @endif
 
-    @if ($hasHead)
+    @if ($hasHead && $dataHead)
         <thead>
             <tr>
                 @foreach ($dataHead as $itemHead)
@@ -25,7 +25,7 @@
         </tbody>
     @endif
 
-    @if ($hasFoot)
+    @if ($hasFoot && $dataFoot)
         <tfoot>
         <tr>
             @foreach ($dataFoot as $itemFoot)

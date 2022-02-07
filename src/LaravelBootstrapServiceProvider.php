@@ -75,6 +75,14 @@ use LaravelBootstrap\View\Component\Nav\NavPill;
 use LaravelBootstrap\View\Component\Nav\Tab;
 use LaravelBootstrap\View\Component\Nav\VerticalNav;
 use LaravelBootstrap\View\Component\Table\Table;
+use LaravelBootstrap\View\Component\Table\TableDanger;
+use LaravelBootstrap\View\Component\Table\TableDark;
+use LaravelBootstrap\View\Component\Table\TableInfo;
+use LaravelBootstrap\View\Component\Table\TableLight;
+use LaravelBootstrap\View\Component\Table\TablePrimary;
+use LaravelBootstrap\View\Component\Table\TableSecondary;
+use LaravelBootstrap\View\Component\Table\TableSuccess;
+use LaravelBootstrap\View\Component\Table\TableWarning;
 
 class LaravelBootstrapServiceProvider extends ServiceProvider
 {
@@ -227,6 +235,14 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
     {
         return [
             Table::class,
+            TableDanger::class,
+            TableDark::class,
+            TableInfo::class,
+            TableLight::class,
+            TablePrimary::class,
+            TableSecondary::class,
+            TableSuccess::class,
+            TableWarning::class,
         ];
     }
 

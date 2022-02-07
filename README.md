@@ -14,6 +14,7 @@ This library provides a collection of Bootstrap components.
 
 - [Anchor](#anchor)
 - [Tab](#tab)
+- [Table](#table)
 
 ---
 
@@ -187,6 +188,19 @@ It will be rendered as:
     </tr>
   </tbody>
 </table>
+```
+
+### Variations
+
+```html
+<x-bs-table-danger ... />
+<x-bs-table-dark ... />
+<x-bs-table-info ... />
+<x-bs-table-light ... />
+<x-bs-table-primary ... />
+<x-bs-table-secondary ... />
+<x-bs-table-success ... />
+<x-bs-table-warning ... />
 ```
 
 ### Attributes
