@@ -1,4 +1,4 @@
-<ul class="nav {{$classTag}}">
+<ul class="{{$classValue}}">
     @if($items)
         @foreach ($items as $item)
             <li class="nav-item">

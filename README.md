@@ -13,6 +13,7 @@ This library provides a collection of Bootstrap components.
 ## Available Components
 
 - [Anchor](#anchor)
+- [Navbar](#navbar)
 - [Tab](#tab)
 - [Table](#table)
 
@@ -68,6 +69,54 @@ It will be rendered as:
 | fas | string | null | Font Awesome solid icon (e.g., check) |
 | far | string | null | Font Awesome regular icon (e.g., clock) |
 | fab | string | null | Font Awesome brand icon (e.g., git) |
+
+---
+
+## Navbar
+
+### Syntax
+
+```php
+$items = [
+    [
+        'id' => 1,
+        'text' => 'Item 1',
+        'href' => '/',
+    ]
+];
+```
+
+```html
+<x-bs-navbar :items="$items" selected="1" themeColor="light" bgThemeColor="light">Company Name</x-bs-navbar>
+```
+It will be rendered as:
+
+```html
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        Company Name
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Item 1</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+```
+### Attributes
+
+| Attribute | Type | Default | Descriptions |
+|---|---|---|---|
+| items | array | null | Array of items |
+| selected | string | null | Selected tab item ID |
+| themeColor | string | null | Navbar theme color. Available values: light, dark |
+| bgThemeColor | string | null | Background theme color |
+| class | string | null | Additional classes |
 
 ---
 

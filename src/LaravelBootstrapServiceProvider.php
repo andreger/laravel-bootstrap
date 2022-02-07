@@ -74,6 +74,7 @@ use LaravelBootstrap\View\Component\Nav\Nav;
 use LaravelBootstrap\View\Component\Nav\NavPill;
 use LaravelBootstrap\View\Component\Nav\Tab;
 use LaravelBootstrap\View\Component\Nav\VerticalNav;
+use LaravelBootstrap\View\Component\Navbar\Navbar;
 use LaravelBootstrap\View\Component\Table\Table;
 use LaravelBootstrap\View\Component\Table\TableDanger;
 use LaravelBootstrap\View\Component\Table\TableDark;
@@ -107,6 +108,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             $this->buttonViewComponents(),
             $this->cardViewComponents(),
             $this->formViewComponents(),
+            $this->navbarViewComponents(),
             $this->navViewComponents(),
             $this->tableViewComponents()
         );
@@ -218,6 +220,13 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             Radio::class,
             Select::class,
             Text::class,
+        ];
+    }
+
+    public function navbarViewComponents()
+    {
+        return [
+            Navbar::class,
         ];
     }
 

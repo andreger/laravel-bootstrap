@@ -1,6 +1,5 @@
 <?php
 
-
 namespace LaravelBootstrap\View\Component\Nav;
 
 use Illuminate\View\Component;
@@ -28,7 +27,7 @@ class Nav extends Component
     public function render()
     {
         return view("bs::nav.nav", [
-            'classTag' => "{$this->baseClass} {$this->class}"
+            'classValue' => "nav {$this->baseClass} {$this->class}"
         ]);
     }
 }
