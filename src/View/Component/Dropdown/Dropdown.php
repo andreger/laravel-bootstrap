@@ -10,12 +10,15 @@ class DropdownButton extends Component
 
     public $text;
 
+    public $items;
+
     public $themeColor;
 
-    public function __construct(string $id = null, string $text = null, string $themeColor = null)
+    public function __construct(string $id = null, string $text = null, array $items = null, string $themeColor = null)
     {
         $this->id = $id;
         $this->text = $text;
+        $this->items = $items;
         $this->themeColor = $themeColor;
     }
 
