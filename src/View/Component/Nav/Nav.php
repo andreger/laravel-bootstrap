@@ -8,16 +8,13 @@ class Nav extends Component
 {
     public $items;
 
-    public $selected;
-
     public $baseClass;
 
     public $class;
 
-    public function __construct(array $items = null, string $selected = null, string $class = null)
+    public function __construct(array $items = null, string $class = null)
     {
         $this->items = $items;
-        $this->selected = $selected;
         $this->class = $class;
     }
 

@@ -64,6 +64,9 @@ use LaravelBootstrap\View\Component\Card\CardPrimary;
 use LaravelBootstrap\View\Component\Card\CardSecondary;
 use LaravelBootstrap\View\Component\Card\CardSuccess;
 use LaravelBootstrap\View\Component\Card\CardWarning;
+use LaravelBootstrap\View\Component\Dropdown\DropdownButton;
+use LaravelBootstrap\View\Component\Dropdown\DropdownMenu;
+use LaravelBootstrap\View\Component\Dropdown\DropdownMenuDark;
 use LaravelBootstrap\View\Component\Form\Checkbox;
 use LaravelBootstrap\View\Component\Form\Password;
 use LaravelBootstrap\View\Component\Form\Text;
@@ -107,6 +110,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             $this->breadcrumbViewComponents(),
             $this->buttonViewComponents(),
             $this->cardViewComponents(),
+            $this->dropdownComponents(),
             $this->formViewComponents(),
             $this->navbarViewComponents(),
             $this->navViewComponents(),
@@ -209,6 +213,15 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             CardSecondary::class,
             CardSuccess::class,
             CardWarning::class,
+        ];
+    }
+
+    public function dropdownComponents()
+    {
+        return [
+            DropdownButton::class,
+            DropdownMenu::class,
+            DropdownMenuDark::class,
         ];
     }
 

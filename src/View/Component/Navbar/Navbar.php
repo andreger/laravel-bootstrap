@@ -8,8 +8,6 @@ class Navbar extends Component
 {
     public $items;
 
-    public $selected;
-
     public $themeColor;
 
     public $bgThemeColor;
@@ -18,13 +16,11 @@ class Navbar extends Component
 
     public function __construct(
         array $items = null,
-        string $selected = null,
         string $themeColor = null,
         string $bgThemeColor = null,
         string $class = null
     ) {
         $this->items = $items;
-        $this->selected = $selected;
         $this->themeColor = $themeColor;
         $this->bgThemeColor = $bgThemeColor;
         $this->class = $class;

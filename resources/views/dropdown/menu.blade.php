@@ -1,6 +1,6 @@
 @include('bs::list.list', [
     'ulClass' => $classValue,
-    'liClass' => 'nav-item',
-    'aClass' => 'nav-link',
+    'liClass' => null,
+    'aClass' => 'dropdown-item',
     'items' => $items,
 ])
