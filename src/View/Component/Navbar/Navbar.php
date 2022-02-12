@@ -16,9 +16,9 @@ class Navbar extends Component
 
     public function __construct(
         array $items = null,
-        string $themeColor = null,
-        string $bgThemeColor = null,
-        string $class = null
+        string $class = null,
+        string $themeColor = 'light',
+        string $bgThemeColor = 'light',
     ) {
         $this->items = $items;
         $this->themeColor = $themeColor;

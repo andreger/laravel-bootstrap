@@ -114,8 +114,8 @@ It will be rendered as:
 |---|---|---|---|
 | items | array | null | Array of items |
 | selected | string | null | Selected tab item ID |
-| themeColor | string | null | Navbar theme color. Available values: light, dark |
-| bgThemeColor | string | null | Background theme color |
+| themeColor | string | light | Navbar theme color. Available values: light, dark |
+| bgThemeColor | string | light | Background theme color |
 | class | string | null | Additional classes |
 
 ---
