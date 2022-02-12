@@ -18,7 +18,7 @@ class Navbar extends Component
         array $items = null,
         string $class = null,
         string $themeColor = 'light',
-        string $bgThemeColor = 'light',
+        string $bgThemeColor = 'light'
     ) {
         $this->items = $items;
         $this->themeColor = $themeColor;
