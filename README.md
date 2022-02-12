@@ -127,17 +127,16 @@ It will be rendered as:
 ```php
 $items = [
     [
-        'id' => 1,
         'text' => 'Item 1',
         'href' => '/',
-        'disable' => false,
+        'active' => true,
         'fas' => 'check',
     ]
 ];
 ```
 
 ```html
-<x-bs-tab :items="$items" selected="1" />
+<x-bs-tab :items="$items" />
 ```
 
 It will be rendered as:
@@ -157,7 +156,6 @@ It will be rendered as:
 | Attribute | Type | Default | Descriptions |
 |---|---|---|---|
 | items | array | null | Array of items |
-| selected | string | null | Selected tab item ID |
 | target | string | null | Link target |
 | class | string | null | Component classes separeted by spaces |
 

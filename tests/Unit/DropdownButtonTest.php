@@ -10,7 +10,7 @@ class DropdownButtonTest extends TestCase
     public function render_dropdown_button()
     {
         $view = $this->blade(
-            '<x-bs-dropdown-button />',
+            '<x-bs-dropdown />',
         );
 
         $view->assertSeeInOrder(['<button', 'dropdown', '</button>'], false);

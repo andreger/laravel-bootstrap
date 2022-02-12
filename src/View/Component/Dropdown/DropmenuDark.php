@@ -2,7 +2,7 @@
 
 namespace LaravelBootstrap\View\Component\Dropdown;
 
-class DropdownMenuDark extends DropdownMenu
+class DropmenuDark extends Dropmenu
 {
     public $themeColor = 'dark';
 }

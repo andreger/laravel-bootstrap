@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarItems">
-            @include('bs::nav.nav', ['classValue' => 'navbar-nav me-auto mb-2 mb-lg-0', 'items' => $items, 'selected' => $selected])
+            @include('bs::nav.nav', ['classValue' => 'navbar-nav me-auto mb-2 mb-lg-0', 'items' => $items])
         </div>
     </div>
 </nav>

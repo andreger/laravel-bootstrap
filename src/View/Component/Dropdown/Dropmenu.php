@@ -4,7 +4,7 @@ namespace LaravelBootstrap\View\Component\Dropdown;
 
 use Illuminate\View\Component;
 
-class DropdownMenu extends Component
+class Dropmenu extends Component
 {
     public $id;
 

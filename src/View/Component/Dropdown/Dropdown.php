@@ -4,7 +4,7 @@ namespace LaravelBootstrap\View\Component\Dropdown;
 
 use Illuminate\View\Component;
 
-class DropdownButton extends Component
+class Dropdown extends Component
 {
     public $id;
 
@@ -13,6 +13,8 @@ class DropdownButton extends Component
     public $items;
 
     public $themeColor;
+
+    public $direction = 'dropdown';
 
     public function __construct(string $id = null, string $text = null, array $items = null, string $themeColor = null)
     {
@@ -27,7 +29,7 @@ class DropdownButton extends Component
      */
     public function render()
     {
-        return view('bs::dropdown.button', [
+        return view('bs::dropdown.dropdown', [
             'classValue' => $this->getClassValue(),
         ]);
     }
