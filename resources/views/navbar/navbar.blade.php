@@ -1,6 +1,6 @@
 <nav class="{{ $classValue }}">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{ $slot }}</a>
+        {{ $slot }}
 
         @if ($items)
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
