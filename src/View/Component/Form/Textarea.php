@@ -2,7 +2,7 @@
 
 namespace LaravelBootstrap\View\Component\Form;
 
-class Text extends Input
+class Textarea extends Input
 {
-    public $type = 'text';
+    public $type = 'textarea';
 }

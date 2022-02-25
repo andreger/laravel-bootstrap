@@ -76,6 +76,7 @@ use LaravelBootstrap\View\Component\Form\Text;
 use LaravelBootstrap\View\Component\Form\Radio;
 use LaravelBootstrap\View\Component\Form\Select;
 use LaravelBootstrap\View\Component\A\A;
+use LaravelBootstrap\View\Component\Form\Textarea;
 use LaravelBootstrap\View\Component\Nav\Nav;
 use LaravelBootstrap\View\Component\Nav\NavPill;
 use LaravelBootstrap\View\Component\Nav\Tab;
@@ -95,8 +96,9 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'bs');
-        $this->loadViewComponentsAs('bs', $this->viewComponents());
+        $prefix ='bs';
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', $prefix);
+        $this->loadViewComponentsAs($prefix, $this->viewComponents());
     }
 
     public function register()
@@ -104,7 +106,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
 
     }
 
-    protected function viewComponents(): array
+    private function viewComponents(): array
     {
         return array_merge(
             $this->alertViewComponents(),
@@ -121,7 +123,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         );
     }
 
-    public function alertViewComponents()
+    private function alertViewComponents()
     {
         return [
             Alert::class,
@@ -136,7 +138,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    public function aViewComponents()
+    private function aViewComponents()
     {
         return [
             A::class,
@@ -159,7 +161,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    public function badgeViewComponents()
+    private function badgeViewComponents()
     {
         return [
             Badge::class,
@@ -174,14 +176,14 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    public function breadcrumbViewComponents()
+    private function breadcrumbViewComponents()
     {
         return [
             Breadcrumb::class,
         ];
     }
 
-    public function buttonViewComponents()
+    private function buttonViewComponents()
     {
         return [
             Button::class,
@@ -204,7 +206,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    public function cardViewComponents()
+    private function cardViewComponents()
     {
         return [
             Card::class,
@@ -219,7 +221,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    public function dropdownComponents()
+    private function dropdownComponents()
     {
         return [
             Dropdown::class,
@@ -231,7 +233,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    public function formViewComponents()
+    private function formViewComponents()
     {
         return [
             Checkbox::class,
@@ -239,17 +241,18 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             Radio::class,
             Select::class,
             Text::class,
+            Textarea::class,
         ];
     }
 
-    public function navbarViewComponents()
+    private function navbarViewComponents()
     {
         return [
             Navbar::class,
         ];
     }
 
-    public function navViewComponents()
+    private function navViewComponents()
     {
         return [
             Nav::class,
@@ -259,7 +262,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    public function tableViewComponents()
+    private function tableViewComponents()
     {
         return [
             Table::class,
