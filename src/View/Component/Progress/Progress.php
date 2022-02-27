@@ -53,7 +53,6 @@ class Progress extends Component
         $this->animated = $animated;
     }
 
-
     /**
      * @inheritDoc
      */
