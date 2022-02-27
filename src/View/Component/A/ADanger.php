@@ -1,8 +1,6 @@
 <?php
 
-
 namespace LaravelBootstrap\View\Component\A;
-
 
 class ADanger extends A
 {

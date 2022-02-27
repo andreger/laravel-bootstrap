@@ -82,6 +82,15 @@ use LaravelBootstrap\View\Component\Nav\NavPill;
 use LaravelBootstrap\View\Component\Nav\Tab;
 use LaravelBootstrap\View\Component\Nav\VerticalNav;
 use LaravelBootstrap\View\Component\Navbar\Navbar;
+use LaravelBootstrap\View\Component\Progress\Progress;
+use LaravelBootstrap\View\Component\Progress\ProgressDanger;
+use LaravelBootstrap\View\Component\Progress\ProgressDark;
+use LaravelBootstrap\View\Component\Progress\ProgressInfo;
+use LaravelBootstrap\View\Component\Progress\ProgressLight;
+use LaravelBootstrap\View\Component\Progress\ProgressPrimary;
+use LaravelBootstrap\View\Component\Progress\ProgressSecondary;
+use LaravelBootstrap\View\Component\Progress\ProgressSuccess;
+use LaravelBootstrap\View\Component\Progress\ProgressWarning;
 use LaravelBootstrap\View\Component\Table\Table;
 use LaravelBootstrap\View\Component\Table\TableDanger;
 use LaravelBootstrap\View\Component\Table\TableDark;
@@ -109,21 +118,22 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
     private function viewComponents(): array
     {
         return array_merge(
-            $this->alertViewComponents(),
-            $this->aViewComponents(),
-            $this->badgeViewComponents(),
-            $this->breadcrumbViewComponents(),
-            $this->buttonViewComponents(),
-            $this->cardViewComponents(),
-            $this->dropdownComponents(),
-            $this->formViewComponents(),
-            $this->navbarViewComponents(),
-            $this->navViewComponents(),
-            $this->tableViewComponents()
+            $this->alert(),
+            $this->a(),
+            $this->badge(),
+            $this->breadcrumb(),
+            $this->button(),
+            $this->card(),
+            $this->dropdown(),
+            $this->form(),
+            $this->nav(),
+            $this->navbar(),
+            $this->progress(),
+            $this->table()
         );
     }
 
-    private function alertViewComponents()
+    private function alert(): array
     {
         return [
             Alert::class,
@@ -138,7 +148,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function aViewComponents()
+    private function a(): array
     {
         return [
             A::class,
@@ -161,7 +171,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function badgeViewComponents()
+    private function badge(): array
     {
         return [
             Badge::class,
@@ -176,14 +186,14 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function breadcrumbViewComponents()
+    private function breadcrumb(): array
     {
         return [
             Breadcrumb::class,
         ];
     }
 
-    private function buttonViewComponents()
+    private function button(): array
     {
         return [
             Button::class,
@@ -206,7 +216,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function cardViewComponents()
+    private function card(): array
     {
         return [
             Card::class,
@@ -221,7 +231,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function dropdownComponents()
+    private function dropdown(): array
     {
         return [
             Dropdown::class,
@@ -233,7 +243,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function formViewComponents()
+    private function form(): array
     {
         return [
             Checkbox::class,
@@ -245,14 +255,14 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function navbarViewComponents()
+    private function navbar(): array
     {
         return [
             Navbar::class,
         ];
     }
 
-    private function navViewComponents()
+    private function nav(): array
     {
         return [
             Nav::class,
@@ -262,7 +272,22 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
         ];
     }
 
-    private function tableViewComponents()
+    private function progress(): array
+    {
+        return [
+            Progress::class,
+            ProgressDanger::class,
+            ProgressDark::class,
+            ProgressInfo::class,
+            ProgressLight::class,
+            ProgressPrimary::class,
+            ProgressSecondary::class,
+            ProgressSuccess::class,
+            ProgressWarning::class,
+        ];
+    }
+
+    private function table(): array
     {
         return [
             Table::class,

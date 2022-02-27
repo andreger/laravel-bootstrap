@@ -1,10 +1,10 @@
 <?php
 
-
 namespace LaravelBootstrap\View\Component\A;
 
+use Illuminate\View\Component;
 
-class A extends \Illuminate\View\Component
+class A extends Component
 {
 
     public $id;
