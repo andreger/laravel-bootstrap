@@ -64,6 +64,7 @@ use LaravelBootstrap\View\Component\Card\CardPrimary;
 use LaravelBootstrap\View\Component\Card\CardSecondary;
 use LaravelBootstrap\View\Component\Card\CardSuccess;
 use LaravelBootstrap\View\Component\Card\CardWarning;
+use LaravelBootstrap\View\Component\Carousel\Carousel;
 use LaravelBootstrap\View\Component\Dropdown\Dropdown;
 use LaravelBootstrap\View\Component\Dropdown\Dropleft;
 use LaravelBootstrap\View\Component\Dropdown\Dropmenu;
@@ -124,6 +125,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             $this->breadcrumb(),
             $this->button(),
             $this->card(),
+            $this->carousel(),
             $this->dropdown(),
             $this->form(),
             $this->nav(),
@@ -228,6 +230,13 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
             CardSecondary::class,
             CardSuccess::class,
             CardWarning::class,
+        ];
+    }
+
+    private function carousel(): array
+    {
+        return [
+            Carousel::class,
         ];
     }
 
