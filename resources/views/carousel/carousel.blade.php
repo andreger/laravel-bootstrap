@@ -1,5 +1,5 @@
 <div id="{{ $id }}" class="carousel slide {{ $crossfade ? 'carousel-fade' : '' }}" data-bs-ride="carousel"
-    {{ ! $touch ? "data-bs-touch='false'" : '' }}>
+    {!! $touch === false ? "data-bs-touch='false'" : '' !!}>
     @if ($indicators)
     <div class="carousel-indicators">
         @foreach ($slides as $slide)

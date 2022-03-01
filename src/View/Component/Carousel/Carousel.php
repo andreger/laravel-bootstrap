@@ -19,8 +19,6 @@ class Carousel extends Component
 
     public $touch;
 
-    public $autoplay;
-
     public $darkTheme = false;
 
     /**
