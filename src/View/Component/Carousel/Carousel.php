@@ -19,6 +19,8 @@ class Carousel extends Component
 
     public $touch;
 
+    public $class;
+
     public $darkTheme = false;
 
     /**
@@ -37,7 +39,8 @@ class Carousel extends Component
         bool $controls = true,
         bool $indicators = true,
         bool $crossfade = false,
-        bool $touch = true
+        bool $touch = true,
+        string $class = null
     )
     {
         if (! $id) {
@@ -52,6 +55,7 @@ class Carousel extends Component
         $this->indicators = $indicators;
         $this->crossfade = $crossfade;
         $this->touch = $touch;
+        $this->class = $class;
     }
 
 

@@ -65,6 +65,7 @@ use LaravelBootstrap\View\Component\Card\CardSecondary;
 use LaravelBootstrap\View\Component\Card\CardSuccess;
 use LaravelBootstrap\View\Component\Card\CardWarning;
 use LaravelBootstrap\View\Component\Carousel\Carousel;
+use LaravelBootstrap\View\Component\Carousel\CarouselDark;
 use LaravelBootstrap\View\Component\Dropdown\Dropdown;
 use LaravelBootstrap\View\Component\Dropdown\Dropleft;
 use LaravelBootstrap\View\Component\Dropdown\Dropmenu;
@@ -237,6 +238,7 @@ class LaravelBootstrapServiceProvider extends ServiceProvider
     {
         return [
             Carousel::class,
+            CarouselDark::class,
         ];
     }
 

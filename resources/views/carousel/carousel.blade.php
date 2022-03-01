@@ -1,16 +1,16 @@
-<div id="{{ $id }}" class="carousel slide {{ $crossfade ? 'carousel-fade' : '' }}" data-bs-ride="carousel"
+<div id="{{ $id }}" class="carousel slide{{ $crossfade ? ' carousel-fade' : '' }}{{ $darkTheme ? ' carousel-dark' : '' }}{{ $class ? " $class" : '' }}" data-bs-ride="carousel"
     {!! $touch === false ? "data-bs-touch='false'" : '' !!}>
     @if ($indicators)
     <div class="carousel-indicators">
         @foreach ($slides as $slide)
-            <button type="button" data-bs-target="#{{ $id }}" data-bs-slide-to="{{ $loop->index }}" {!! $loop->first ? "class='active'" : ''   !!}></button>
+            <button type="button" data-bs-target="#{{ $id }}" data-bs-slide-to="{{ $loop->index }}"{!! $loop->first ? " class='active'" : ''   !!}></button>
         @endforeach
     </div>
     @endif
     <div class="carousel-inner">
         @foreach ($slides as $slide)
-        <div class="carousel-item {{ $loop->first ? 'active' : ''  }}" {!! isset($slide['interval']) ? "alt='{$slide['interval']}'" : ''  !!}>
-            <img src="{{ $slide['image'] ?? null }}" class="d-block w-100" {!! isset($slide['title']) ? "alt='{$slide['title']}'" : ''  !!} >
+        <div class="carousel-item{{ $loop->first ? ' active' : ''  }}"{!! isset($slide['interval']) ? " alt='{$slide['interval']}'" : ''  !!}>
+            <img src="{{ $slide['image'] ?? null }}" class="d-block w-100"{!! isset($slide['title']) ? " alt='{$slide['title']}'" : ''  !!} >
 
             @if (isset($slide['title']) || isset($slide['description']))
             <div class="carousel-caption d-none d-md-block">

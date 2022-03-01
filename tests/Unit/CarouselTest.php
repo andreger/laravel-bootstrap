@@ -81,4 +81,14 @@ class CarouselTest extends TestCase
 
         $view->assertSee("data-bs-touch='false'", false);
     }
+
+    /** @test */
+    public function dark()
+    {
+        $view = $this->blade(
+            '<x-bs-carousel-dark />'
+        );
+
+        $view->assertSeeInOrder(['<div', 'carousel', 'carousel-dark', '</div>'], false);
+    }
 }
