@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Carousel;
+namespace Andreger\Bootstrap\View\Component\Carousel;
 
 class CarouselDark extends Carousel
 {

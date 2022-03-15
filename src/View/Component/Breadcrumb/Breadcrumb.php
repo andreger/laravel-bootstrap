@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Breadcrumb;
+namespace Andreger\Bootstrap\View\Component\Breadcrumb;
 
 use Illuminate\View\Component;
 

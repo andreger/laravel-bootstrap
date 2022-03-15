@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelBootstrap\View\Component\Button;
+namespace Andreger\Bootstrap\View\Component\Button;
 
 
 class ButtonOutlineSecondary extends Button

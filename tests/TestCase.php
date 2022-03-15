@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelBootstrap\Tests;
+namespace Andreger\Bootstrap\Tests;
 
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
-use LaravelBootstrap\LaravelBootstrapServiceProvider;
+use Andreger\Bootstrap\BootstrapServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -18,7 +18,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            LaravelBootstrapServiceProvider::class,
+            BootstrapServiceProvider::class,
         ];
     }
 

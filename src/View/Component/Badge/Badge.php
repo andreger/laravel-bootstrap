@@ -1,10 +1,10 @@
 <?php
 
 
-namespace LaravelBootstrap\View\Component\Badge;
+namespace Andreger\Bootstrap\View\Component\Badge;
 
 
-use LaravelBootstrap\Helpers\ThemeColor;
+use Andreger\Bootstrap\Helpers\ThemeColor;
 
 class Badge extends \Illuminate\View\Component
 {

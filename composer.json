@@ -1,5 +1,5 @@
 {
-    "name": "asgedev/laravel-bootstrap",
+    "name": "andreger/laravel-bootstrap",
     "description": "This library provides a collection of Bootstrap components.",
     "type": "library",
     "license": "MIT",
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelBootstrap\\": "src"
+            "Andreger\\Bootstrap\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelBootstrap\\Tests\\": "tests"
+            "Andreger\\Bootstrap\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelBootstrap\\LaravelBootstrapServiceProvider"
+                "Andreger\\Bootstrap\\BootstrapServiceProvider"
             ]
         }
     }

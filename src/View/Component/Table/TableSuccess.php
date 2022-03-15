@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelBootstrap\View\Component\Table;
+namespace Andreger\Bootstrap\View\Component\Table;
 
 
 class TableSuccess extends Table

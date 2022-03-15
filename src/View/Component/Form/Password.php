@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Form;
+namespace Andreger\Bootstrap\View\Component\Form;
 
 class Password extends Input
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Progress;
+namespace Andreger\Bootstrap\View\Component\Progress;
 
 class ProgressDark extends Progress
 {

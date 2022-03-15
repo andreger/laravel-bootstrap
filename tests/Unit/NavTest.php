@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelBootstrap\Tests\Unit;
+namespace Andreger\Bootstrap\Tests\Unit;
 
-use LaravelBootstrap\Tests\TestCase;
+use Andreger\Bootstrap\Tests\TestCase;
 
 class NavTest extends TestCase
 {

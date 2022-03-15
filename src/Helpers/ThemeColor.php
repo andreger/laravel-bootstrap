@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelBootstrap\Helpers;
+namespace Andreger\Bootstrap\Helpers;
 
 
 class ThemeColor

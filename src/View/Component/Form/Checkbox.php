@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelBootstrap\View\Component\Form;
+namespace Andreger\Bootstrap\View\Component\Form;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component;

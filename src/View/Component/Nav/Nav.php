@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Nav;
+namespace Andreger\Bootstrap\View\Component\Nav;
 
 use Illuminate\View\Component;
 

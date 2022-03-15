@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\A;
+namespace Andreger\Bootstrap\View\Component\A;
 
 use Illuminate\View\Component;
 

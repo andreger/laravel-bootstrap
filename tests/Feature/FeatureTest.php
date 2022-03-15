@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\Tests\Feature;
+namespace Andreger\Bootstrap\Tests\Feature;
 
 use Orchestra\Testbench\TestCase;
 

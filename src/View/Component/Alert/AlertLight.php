@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Alert;
+namespace Andreger\Bootstrap\View\Component\Alert;
 
 class AlertLight extends Alert
 {

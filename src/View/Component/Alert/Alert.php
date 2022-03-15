@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelBootstrap\View\Component\Alert;
+namespace Andreger\Bootstrap\View\Component\Alert;
 
 use Illuminate\View\Component;
 

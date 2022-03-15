@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Card;
+namespace Andreger\Bootstrap\View\Component\Card;
 
 use Illuminate\View\Component;
-use LaravelBootstrap\Helpers\ThemeColor;
+use Andreger\Bootstrap\Helpers\ThemeColor;
 
 class Card extends Component
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBootstrap\View\Component\Dropdown;
+namespace Andreger\Bootstrap\View\Component\Dropdown;
 
 class Dropright extends Dropdown
 {

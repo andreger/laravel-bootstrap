@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelBootstrap\View\Component\Card;
+namespace Andreger\Bootstrap\View\Component\Card;
 
 
 class CardSecondary extends Card
