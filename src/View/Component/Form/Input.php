@@ -56,12 +56,43 @@ abstract class Input extends Component
     public function render()
     {
         return view("bs::form.input", [
-            'args' => [
-                'placeholder' => $this->placeholder,
-                'disabled' => $this->disabled,
-                'readonly' => $this->readonly,
-                'class' => "form-control $this->class",
-            ]
+            'attributesStr' => $this->getAttributes(),
+            'classValue' => "form-control {$this->class}",
         ]);
     }
+
+    /**
+     * Get attributes
+     *
+     * @param array $except
+     * @return string
+     */
+    protected function getAttributes(array $except = []): string
+    {
+        $attributes = [
+            'id' => $this->id,
+            'type' => $this->type,
+            'name' => $this->name,
+            'value' => $this->value,
+            'placeholder' => $this->placeholder,
+            'disabled' => $this->disabled ? 'disabled' : null,
+            'readonly' => $this->readonly ? 'readonly' : null,
+        ];
+
+        $str = '';
+
+        foreach ($attributes as $attrKey => $attrValue) {
+
+            if (in_array($attrKey, $except)) {
+                continue;
+            }
+
+            if ($attrValue !== null) {
+                $str .= " {$attrKey}='{$attrValue}'";
+            }
+        }
+
+        return $str;
+    }
+
 }
