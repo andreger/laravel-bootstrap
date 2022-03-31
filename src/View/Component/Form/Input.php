@@ -24,6 +24,8 @@ abstract class Input extends Component
 
     public $label;
 
+    public $formGroup;
+
     public function __construct(
         $id = null,
         $type = 'text',
@@ -33,7 +35,8 @@ abstract class Input extends Component
         $disabled = false,
         $readonly = false,
         $class = null,
-        $label = null
+        $label = null,
+        $formGroup = true
     )
     {
         if(! $this->type) {
@@ -48,6 +51,7 @@ abstract class Input extends Component
         $this->readonly = $readonly;
         $this->class = $class;
         $this->label = $label;
+        $this->formGroup = $formGroup;
     }
 
     /**
