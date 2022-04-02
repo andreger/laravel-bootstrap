@@ -2,6 +2,14 @@
 
 namespace Andreger\Bootstrap;
 
+use Andreger\Bootstrap\View\Component\Form\Color;
+use Andreger\Bootstrap\View\Component\Form\Date;
+use Andreger\Bootstrap\View\Component\Form\DatetimeLocal;
+use Andreger\Bootstrap\View\Component\Form\Month;
+use Andreger\Bootstrap\View\Component\Form\Number;
+use Andreger\Bootstrap\View\Component\Form\Range;
+use Andreger\Bootstrap\View\Component\Form\Time;
+use Andreger\Bootstrap\View\Component\Form\Week;
 use Illuminate\Support\ServiceProvider;
 use Andreger\Bootstrap\View\Component\A\ADanger;
 use Andreger\Bootstrap\View\Component\A\ADark;
@@ -258,11 +266,19 @@ class BootstrapServiceProvider extends ServiceProvider
     {
         return [
             Checkbox::class,
+            Color::class,
+            Date::class,
+            DatetimeLocal::class,
+            Month::class,
+            Number::class,
             Password::class,
             Radio::class,
+            Range::class,
             Select::class,
             Text::class,
             Textarea::class,
+            Time::class,
+            Week::class,
         ];
     }
 
