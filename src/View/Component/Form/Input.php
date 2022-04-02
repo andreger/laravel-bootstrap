@@ -69,7 +69,7 @@ abstract class Input extends Component
     {
         return view("bs::form.input", [
             'attributesStr' => $this->getAttributes(),
-            'classValue' => "form-control {$this->class}",
+            'classValue' => $this->getClassValue(),
         ]);
     }
 
@@ -105,6 +105,16 @@ abstract class Input extends Component
         }
 
         return $str;
+    }
+
+    /**
+     * Get class value
+     *
+     * @return string
+     */
+    protected function getClassValue()
+    {
+        return "form-control {$this->class}";
     }
 
 }
