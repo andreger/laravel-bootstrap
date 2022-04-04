@@ -2,17 +2,14 @@
 
 namespace Andreger\Bootstrap\View\Component\Form;
 
-use Illuminate\View\Component;
-
-abstract class Input extends Component
+/**
+ * Class Input
+ *
+ * @package Andreger\Bootstrap\View\Component\Form
+ */
+class Input extends Field
 {
-    public $id;
-
     public $type;
-
-    public $name;
-
-    public $value;
 
     public $placeholder;
 
@@ -20,68 +17,52 @@ abstract class Input extends Component
 
     public $readonly;
 
-    public $class;
-
-    public $label;
-
-    public $formGroup;
-
-    public $tip;
-
-    public $tipIconClass;
-
+    /**
+     * Input constructor.
+     *
+     * @param string|null $id
+     * @param string $type
+     * @param string|null $name
+     * @param string|null $value
+     * @param string|null $placeholder
+     * @param bool $disabled
+     * @param bool $readonly
+     * @param string|null $class
+     * @param string|null $label
+     * @param bool $formGroup
+     * @param string|null $tooltip
+     */
     public function __construct(
-        $id = null,
-        $type = 'text',
-        $name = null,
-        $value = null,
-        $placeholder = null,
-        $disabled = false,
-        $readonly = false,
-        $class = null,
-        $label = null,
-        $formGroup = true,
-        $tip = null,
-        $tipIconClass = null
+        string $id = null,
+        string $type = 'text',
+        string $name = null,
+        string $value = null,
+        string $placeholder = null,
+        bool $disabled = false,
+        bool $readonly = false,
+        string $class = null,
+        string $label = null,
+        bool $formGroup = true,
+        string $tooltip = null
     )
     {
+        parent::__construct($id, $name, $value, $class, $label, $formGroup, $tooltip);
+
         if(! $this->type) {
             $this->type = $type;
         }
 
-        $this->id = $id;
-        $this->name = $name;
-        $this->value = $value;
         $this->placeholder = $placeholder;
         $this->disabled = $disabled;
         $this->readonly = $readonly;
-        $this->class = $class;
-        $this->label = $label;
-        $this->formGroup = $formGroup;
-        $this->tip = $tip;
-        $this->tipIconClass = $tipIconClass;
     }
 
     /**
      * @inheritDoc
      */
-    public function render()
+    protected function setAttributes(): array
     {
-        return view("bs::form.input", [
-            'attributesStr' => $this->getAttributes(),
-            'classValue' => $this->getClassValue(),
-        ]);
-    }
-
-    /**
-     * Get attributes
-     *
-     * @param array $except
-     * @return string
-     */
-    protected function getAttributes(array $except = []): string
-    {
-        $attributes = [
+        return [
             'id' => $this->id,
             'type' => $this->type,
             'name' => $this->name,
@@ -90,31 +71,22 @@ abstract class Input extends Component
             'disabled' => $this->disabled ? 'disabled' : null,
             'readonly' => $this->readonly ? 'readonly' : null,
         ];
-
-        $str = '';
-
-        foreach ($attributes as $attrKey => $attrValue) {
-
-            if (in_array($attrKey, $except)) {
-                continue;
-            }
-
-            if ($attrValue !== null) {
-                $str .= " {$attrKey}='{$attrValue}'";
-            }
-        }
-
-        return $str;
     }
 
     /**
-     * Get class value
-     *
-     * @return string
+     * @inheritDoc
      */
-    protected function getClassValue()
+    protected function getClassValue(): string
     {
         return "form-control {$this->class}";
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function getInnerView(): string
+    {
+        return 'bs::form.input';
     }
 
 }

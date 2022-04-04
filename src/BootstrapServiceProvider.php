@@ -4,7 +4,6 @@ namespace Andreger\Bootstrap;
 
 use Andreger\Bootstrap\View\Component\Form\Color;
 use Andreger\Bootstrap\View\Component\Form\Date;
-use Andreger\Bootstrap\View\Component\Form\DatePicker;
 use Andreger\Bootstrap\View\Component\Form\DatetimeLocal;
 use Andreger\Bootstrap\View\Component\Form\Month;
 use Andreger\Bootstrap\View\Component\Form\Number;
@@ -269,7 +268,6 @@ class BootstrapServiceProvider extends ServiceProvider
             Checkbox::class,
             Color::class,
             Date::class,
-            DatePicker::class,
             DatetimeLocal::class,
             Month::class,
             Number::class,

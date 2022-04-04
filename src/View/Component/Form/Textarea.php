@@ -9,11 +9,8 @@ class Textarea extends Input
     /**
      * @inheritDoc
      */
-    public function render()
+    protected function getInnerView(): string
     {
-        return view("bs::form.textarea", [
-            'attributesStr' => $this->getAttributes(['value']),
-            'classValue' => "form-control {$this->class}",
-        ]);
+        return 'bs::form.textarea';
     }
 }

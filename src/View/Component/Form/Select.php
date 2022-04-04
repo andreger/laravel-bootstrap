@@ -2,17 +2,14 @@
 
 namespace Andreger\Bootstrap\View\Component\Form;
 
-use Illuminate\View\Component;
-
-class Select extends Component
+/**
+ * Class Select
+ *
+ * @package Andreger\Bootstrap\View\Component\Form
+ */
+class Select extends Field
 {
-    public $id;
-
-    public $name;
-
     public $options;
-
-    public $selected;
 
     public $placeholder;
 
@@ -22,50 +19,75 @@ class Select extends Component
 
     public $multiple;
 
-    public $class;
-
-    public $label;
-
+    /**
+     * Select constructor.
+     *
+     * @param string|null $id
+     * @param string|null $name
+     * @param array $options
+     * @param string|null $value
+     * @param string|null $placeholder
+     * @param bool $disabled
+     * @param string|null $size
+     * @param string|null $multiple
+     * @param string|null $class
+     * @param string|null $label
+     * @param bool $formGroup
+     * @param string|null $tooltip
+     */
     public function __construct(
-        $id = null,
-        $name = null,
-        $options = [],
-        $selected = null,
-        $placeholder = null,
-        $disabled = false,
-        $size = null,
-        $multiple = null,
-        $class = null,
-        $label = null
+        string $id = null,
+        string $name = null,
+        array $options = [],
+        string $value = null,
+        string $placeholder = null,
+        bool $disabled = false,
+        string $size = null,
+        string $multiple = null,
+        string $class = null,
+        string $label = null,
+        bool $formGroup = true,
+        string $tooltip = null
     )
     {
-        $this->id = $id;
-        $this->name = $name;
+        parent::__construct($id, $name, $value, $class, $label, $formGroup, $tooltip);
+
         $this->options = $options;
-        $this->selected = $selected;
         $this->placeholder = $placeholder;
         $this->disabled = $disabled;
         $this->size = $size;
         $this->multiple = $multiple;
-        $this->class = $class;
-        $this->label = $label;
     }
-
 
     /**
      * @inheritDoc
      */
-    public function render()
+    protected function setAttributes(): array
     {
-        return view("bs::form.select", [
-            'args' => [
-                'id' => $this->id,
-                'placeholder' => $this->placeholder,
-                'disabled' => $this->disabled,
-                'size' => $this->size,
-                'multiple' => $this->multiple,
-                'class' => "form-select $this->class",
-            ]
-        ]);
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'placeholder' => $this->placeholder,
+            'disabled' => $this->disabled,
+            'size' => $this->size,
+            'multiple' => $this->multiple ? 'multiple' : null,
+            'disabled' => $this->disabled ? 'disabled' : null,
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function getClassValue(): string
+    {
+        return "form-control {$this->class}";
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function getInnerView(): string
+    {
+        return 'bs::form.select';
     }
 }
