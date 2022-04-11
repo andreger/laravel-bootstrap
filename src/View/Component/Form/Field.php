@@ -16,7 +16,7 @@ abstract class Field extends Component
 
     public $label;
 
-    public $formGroup;
+    public $outerDiv;
 
     public $tooltip;
 
@@ -28,7 +28,7 @@ abstract class Field extends Component
      * @param string|null $value
      * @param string|null $class
      * @param string|null $label
-     * @param bool $formGroup
+     * @param string|null $outerDiv
      * @param string|null $tooltip
      */
     public function __construct(
@@ -37,7 +37,7 @@ abstract class Field extends Component
         string $value = null,
         string $class = null,
         string $label = null,
-        bool $formGroup = true,
+        string $outerDiv = 'form-group mb-3',
         string $tooltip = null
     )
     {
@@ -46,7 +46,7 @@ abstract class Field extends Component
         $this->value = $value;
         $this->class = $class;
         $this->label = $label;
-        $this->formGroup = $formGroup;
+        $this->outerDiv = $outerDiv;
         $this->tooltip = $tooltip;
     }
 
@@ -55,8 +55,8 @@ abstract class Field extends Component
      */
     public function render()
     {
-        $outerView = $this->formGroup
-            ? 'bs::form.group'
+        $outerView = $this->outerDiv
+            ? 'bs::form.outer'
             : 'bs::form.field';
 
         return view($outerView, [
