@@ -29,7 +29,7 @@ class Input extends Field
      * @param bool $readonly
      * @param string|null $class
      * @param string|null $label
-     * @param bool $formGroup
+     * @param string|null $outerDiv
      * @param string|null $tooltip
      */
     public function __construct(
@@ -42,11 +42,11 @@ class Input extends Field
         bool $readonly = false,
         string $class = null,
         string $label = null,
-        bool $formGroup = true,
+        string $outerDiv = 'form-group mb-3',
         string $tooltip = null
     )
     {
-        parent::__construct($id, $name, $value, $class, $label, $formGroup, $tooltip);
+        parent::__construct($id, $name, $value, $class, $label, $outerDiv, $tooltip);
 
         if(! $this->type) {
             $this->type = $type;

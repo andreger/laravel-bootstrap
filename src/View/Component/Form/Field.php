@@ -37,7 +37,7 @@ abstract class Field extends Component
         string $value = null,
         string $class = null,
         string $label = null,
-        string $outerDiv = 'form-group mb-3',
+        string $outerDiv = null,
         string $tooltip = null
     )
     {
