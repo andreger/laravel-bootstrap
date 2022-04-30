@@ -29,6 +29,8 @@ class Button extends Component
 
     public $fab;
 
+    public $dusk;
+
     public function __construct(
         $id = null,
         $themeColor = 'primary',
@@ -39,7 +41,8 @@ class Button extends Component
         $class = null,
         $fas = null,
         $fab = null,
-        $far = null
+        $far = null,
+        $dusk = null
     )
     {
         if(! $this->themeColor) {
@@ -55,6 +58,7 @@ class Button extends Component
         $this->fas = $fas;
         $this->far = $far;
         $this->fab = $fab;
+        $this->dusk = $dusk;
     }
 
     /**
@@ -66,6 +70,7 @@ class Button extends Component
             'nameTag' => $this->name ? "name={$this->name}" : null,
             'disabledTag' => $this->disabled ? 'disabled' : null,
             'classTag' => "btn btn-{$this->themeColor} {$this->class}",
+            'duskTag' => $this->dusk ? "dusk={$this->dusk}" : '',
         ]);
     }
 }

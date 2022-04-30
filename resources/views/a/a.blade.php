@@ -1,4 +1,4 @@
-<a {{ $hrefTag }} class="{{ $classTag }}" {{ $targetTag }}>
+<a {{ $hrefTag }} class="{{ $classTag }}" {{ $targetTag }} {{ $duskTag }}>
     @include('bs::common.fontAwesome')
     {{ $text }}
 </a>

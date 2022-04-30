@@ -25,6 +25,8 @@ class A extends Component
 
     public $fab;
 
+    public $dusk;
+
     public function __construct(
         $id = null,
         $themeColor = null,
@@ -34,7 +36,8 @@ class A extends Component
         $class = null,
         $fas = null,
         $far = null,
-        $fab = null
+        $fab = null,
+        $dusk = null
     )
     {
         if(! $this->themeColor) {
@@ -49,6 +52,7 @@ class A extends Component
         $this->fas = $fas;
         $this->far = $far;
         $this->fab = $fab;
+        $this->dusk = $dusk;
     }
 
     /**
@@ -62,6 +66,7 @@ class A extends Component
             'hrefTag' => $this->href ? "href={$this->href}" : '',
             'targetTag' => $this->target ? "target={$this->target}" : '',
             'classTag' => "{$buttonClass} {$this->class}",
+            'duskTag' => $this->dusk ? "dusk={$this->dusk}" : '',
         ]);
     }
 }

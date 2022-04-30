@@ -74,6 +74,7 @@ class Select extends Field
             'size' => $this->size,
             'multiple' => $this->multiple ? 'multiple' : null,
             'disabled' => $this->disabled ? 'disabled' : null,
+            'dusk' => $this->dusk,
         ];
     }
 
