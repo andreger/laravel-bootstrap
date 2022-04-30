@@ -34,6 +34,7 @@ class Select extends Field
      * @param string|null $label
      * @param string|null $outerDiv
      * @param string|null $tooltip
+     * @param string|null $dusk
      */
     public function __construct(
         string $id = null,
@@ -47,10 +48,11 @@ class Select extends Field
         string $class = null,
         string $label = null,
         string $outerDiv = 'form-group mb-3',
-        string $tooltip = null
+        string $tooltip = null,
+        string $dusk = null
     )
     {
-        parent::__construct($id, $name, $value, $class, $label, $outerDiv, $tooltip);
+        parent::__construct($id, $name, $value, $class, $label, $outerDiv, $tooltip, $dusk);
 
         $this->options = $options;
         $this->placeholder = $placeholder;

@@ -24,6 +24,8 @@ class Checkbox extends Component
 
     public $label;
 
+    public $dusk;
+
     public function __construct(
         $id = null,
         $name = null,
@@ -31,7 +33,8 @@ class Checkbox extends Component
         $selected = null,
         $disabled = false,
         $class = null,
-        $label = null
+        $label = null,
+        $dusk = null
     )
     {
         $this->id = $id;
@@ -41,6 +44,7 @@ class Checkbox extends Component
         $this->disabled = $disabled;
         $this->class = $class;
         $this->label = $label;
+        $this->dusk = $dusk;
     }
 
     /**
@@ -53,6 +57,7 @@ class Checkbox extends Component
                 'disabled' => $this->disabled,
                 'class' => "form-check-input $this->class",
                 'id' => $this->id ?? $this->name . '-' . Str::random(10) ?? null,
+                'dusk' => $this->dusk,
             ]
         ]);
     }

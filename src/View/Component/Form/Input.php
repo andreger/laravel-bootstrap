@@ -31,6 +31,7 @@ class Input extends Field
      * @param string|null $label
      * @param string|null $outerDiv
      * @param string|null $tooltip
+     * @param string|null $dusk
      */
     public function __construct(
         string $id = null,
@@ -43,10 +44,11 @@ class Input extends Field
         string $class = null,
         string $label = null,
         string $outerDiv = 'form-group mb-3',
-        string $tooltip = null
+        string $tooltip = null,
+        string $dusk = null
     )
     {
-        parent::__construct($id, $name, $value, $class, $label, $outerDiv, $tooltip);
+        parent::__construct($id, $name, $value, $class, $label, $outerDiv, $tooltip, $dusk);
 
         if(! $this->type) {
             $this->type = $type;
@@ -70,6 +72,7 @@ class Input extends Field
             'placeholder' => $this->placeholder,
             'disabled' => $this->disabled ? 'disabled' : null,
             'readonly' => $this->readonly ? 'readonly' : null,
+            'dusk' => $this->dusk,
         ];
     }
 

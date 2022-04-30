@@ -20,6 +20,8 @@ abstract class Field extends Component
 
     public $tooltip;
 
+    public $dusk;
+
     /**
      * Field constructor.
      *
@@ -30,6 +32,7 @@ abstract class Field extends Component
      * @param string|null $label
      * @param string|null $outerDiv
      * @param string|null $tooltip
+     * @param string|null $dusk
      */
     public function __construct(
         string $id = null,
@@ -38,7 +41,8 @@ abstract class Field extends Component
         string $class = null,
         string $label = null,
         string $outerDiv = null,
-        string $tooltip = null
+        string $tooltip = null,
+        string $dusk = null
     )
     {
         $this->id = $id;
@@ -48,6 +52,7 @@ abstract class Field extends Component
         $this->label = $label;
         $this->outerDiv = $outerDiv;
         $this->tooltip = $tooltip;
+        $this->dusk = $dusk;
     }
 
     /**
